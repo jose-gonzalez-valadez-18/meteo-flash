@@ -1,13 +1,17 @@
-import { location } from './getLocation';
+import { location } from "./getLocation";
 
 class Actions extends EventTarget {
-constructor(){
+  constructor() {
     super();
     this.location = location;
-}
+  }
 
   ejecutarUbicacion() {
-    this.location.getLocation();
+    return this.location.getLocation();
+  }
+
+  obtenerFecha() {
+    return this.location.getFormattedDate();
   }
 }
 
