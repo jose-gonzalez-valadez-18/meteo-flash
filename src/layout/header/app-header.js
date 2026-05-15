@@ -15,7 +15,7 @@ export class AppHeader extends LitElement {
     return html`
       <header>
         <a href="/" class="container-logo" aria-label="Mejor pronostico del clima Meteo-Flash">
-          <img src="/public/assets/logo.webp" href="" alt="$1" />
+          <img src="/assets/logo.webp" href="" alt="$1" />
           <h1>Meteo-Flash</h1>
         </a>
         <div class="container-search">
