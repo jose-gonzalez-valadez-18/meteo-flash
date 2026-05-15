@@ -12,31 +12,50 @@ class Ifs extends EventTarget {
 
     // Despejado
     if (weatherCode === 0) {
-      return esDia ? "/src/assets/clima/dia/despejado-dia.webp" : "/src/assets/clima/noche/despejado-noche.webp";
+      return esDia
+        ? "/assets/clima/dia/despejado-dia.webp"
+        : "/assets/clima/noche/despejado-noche.webp";
     }
 
     // Parcialmente nublado
     if (weatherCode === 1 || weatherCode === 2) {
-      return esDia ? "/src/assets/clima/dia/parcial-nublado-dia.webp" : "/src/assets/clima/noche/parcial-nublado-noche.webp";
+      return esDia
+        ? "/assets/clima/dia/parcial-nublado-dia.webp"
+        : "/assets/clima/noche/parcial-nublado-noche.webp";
     }
 
     // Nublado
-    if (weatherCode === 3 || weatherCode === 45 || weatherCode === 48) {
-      return esDia ? "/src/assets/clima/dia/nublado-dia.webp" : "/src/assets/clima/noche/nublado-noche.webp";
+    if (
+      weatherCode === 3 ||
+      weatherCode === 45 ||
+      weatherCode === 48
+    ) {
+      return esDia
+        ? "/assets/clima/dia/nublado-dia.webp"
+        : "/assets/clima/noche/nublado-noche.webp";
     }
 
     // Llovizna / lluvia / nieve
-    if ((weatherCode >= 51 && weatherCode <= 67) || (weatherCode >= 71 && weatherCode <= 86)) {
-      return esDia ? "/src/assets/clima/dia/lluvioso-dia.webp" : "/src/assets/clima/noche/lluvioso-noche.webp";
+    if (
+      (weatherCode >= 51 && weatherCode <= 67) ||
+      (weatherCode >= 71 && weatherCode <= 86)
+    ) {
+      return esDia
+        ? "/assets/clima/dia/lluvioso-dia.webp"
+        : "/assets/clima/noche/lluvioso-noche.webp";
     }
 
     // Tormenta
     if (weatherCode >= 95 && weatherCode <= 99) {
-      return esDia ? "/src/assets/clima/dia/tormenta-dia.webp" : "/src/assets/clima/noche/tormenta-noche.webp";
+      return esDia
+        ? "/assets/clima/dia/tormenta-dia.webp"
+        : "/assets/clima/noche/tormenta-noche.webp";
     }
 
     // Default
-    return esDia ? "/src/assets/clima/dia/tormenta-dia.webp" : "/src/assets/clima/noche/despejado-noche.webp";
+    return esDia
+      ? "/assets/clima/dia/despejado-dia.webp"
+      : "/assets/clima/noche/despejado-noche.webp";
   }
 
   obtenerTextoClima(weatherCode) {
@@ -133,13 +152,22 @@ class Ifs extends EventTarget {
   obtenerIcono(weatherCode) {
     if (weatherCode === 0) return icons.sun;
 
-    if (weatherCode === 1 || weatherCode === 2) return icons.sunCloud;
+    if (weatherCode === 1 || weatherCode === 2) {
+      return icons.sunCloud;
+    }
 
-    if (weatherCode === 3 || weatherCode === 45 || weatherCode === 48) {
+    if (
+      weatherCode === 3 ||
+      weatherCode === 45 ||
+      weatherCode === 48
+    ) {
       return icons.cloud;
     }
 
-    if ((weatherCode >= 51 && weatherCode <= 67) || (weatherCode >= 71 && weatherCode <= 86)) {
+    if (
+      (weatherCode >= 51 && weatherCode <= 67) ||
+      (weatherCode >= 71 && weatherCode <= 86)
+    ) {
       return icons.cloudRain;
     }
 
