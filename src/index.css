@@ -9,10 +9,11 @@ html {
   box-sizing: border-box;
   width: 90%;
   overflow-x: hidden;
+  margin: auto;
 }
 
 body{
-    width: 90%;
+    width: 100%;
 }
 
 *, *:before, *:after {

@@ -27,12 +27,6 @@ export class AppHeader extends LitElement {
             <li>
               <a class="button-header" href="">${icons.cityHeart}</a>
             </li>
-            <li>
-              <a class="button-header" href="">${icons.cityHeart}</a>
-            </li>
-            <li>
-              <a class="button-header" href="">${icons.cityHeart}</a>
-            </li>
           </ul>
         </nav>
       </header>

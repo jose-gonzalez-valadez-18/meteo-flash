@@ -29,6 +29,7 @@ export default css`
       img {
         height: 50%;
       }
+
       h1 {
         width: auto;
         font-size: 18px;
@@ -45,10 +46,13 @@ export default css`
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        li{
+        padding: 0;
+        margin: 0;
+
+        li {
           list-style: none;
 
-          .button-header{
+          .button-header {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -67,6 +71,7 @@ export default css`
       position: relative;
       display: flex;
       align-items: center;
+
       .icon {
         position: absolute;
         left: 12px;
@@ -75,6 +80,7 @@ export default css`
         color: #a5c893;
         font-size: 22px;
       }
+
       input {
         padding-left: 40px;
         width: 248px;
@@ -85,7 +91,9 @@ export default css`
         border: none;
         color: #c4d4c4;
         font-size: 15px;
+        box-sizing: border-box;
       }
+
       input::placeholder {
         color: #a5c893;
       }
@@ -105,6 +113,112 @@ export default css`
 
       img {
         width: 100%;
+      }
+    }
+
+    @media (max-width: 900px) {
+      gap: 12px;
+
+      .container-logo {
+        h1 {
+          font-size: 16px;
+        }
+      }
+
+      .container-search {
+        input {
+          width: 190px;
+        }
+      }
+
+      nav {
+        ul {
+          gap: 12px;
+        }
+      }
+    }
+
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 0 15px;
+
+      .container-logo {
+        width: 100%;
+        height: 55px;
+        justify-content: center;
+
+        img {
+          height: 45%;
+        }
+
+        h1 {
+          font-size: 16px;
+        }
+      }
+
+      /* ICONOS + BUSCADOR EN UNA SOLA LÍNEA */
+      nav {
+        order: 2;
+
+        ul {
+          gap: 10px;
+        }
+      }
+
+      .container-search {
+        order: 2;
+        flex: 1;
+        min-width: 150px;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 420px) {
+      width: 94%;
+      gap: 10px;
+
+      .container-logo {
+        h1 {
+          font-size: 14px;
+        }
+      }
+
+      nav {
+        ul {
+          gap: 8px;
+
+          li {
+            .button-header {
+              height: 36px;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      .container-search {
+        min-width: 120px;
+
+        input {
+          height: 36px;
+          font-size: 14px;
+        }
+
+        .icon {
+          font-size: 18px;
+        }
+      }
+
+      button {
+        height: 38px;
+        width: 38px;
+        font-size: 38px;
       }
     }
   }
